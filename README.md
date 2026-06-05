@@ -1,21 +1,27 @@
-# 🎬 Netflix Data Cleansing & Feature Engineering
+# 🎬 Netflix Data Cleansing & Exploratory Data Analysis (EDA)
 
 ## 📌 Project Overview
-This project focuses on data cleansing and feature engineering using the global Netflix titles dataset. The main goal was to extract processable numeric metrics from mixed string columns (e.g., separating "90 min" from "2 Seasons") to calculate accurate business metrics.
+This project focuses on **End-to-End Data Analysis**, starting with data cleansing and feature engineering, culminating in a comprehensive Business Intelligence Dashboard using the global Netflix titles dataset.
 
-## 🎯 Business Problem
-In raw datasets, data types are often mixed. In this case, the `duration` column contained both minutes (for Movies) and seasons (for TV Shows). Business Intelligence tools cannot aggregate these strings directly without generating **False Positives** or errors.
+## 🎯 Business Problem & Solution
+The raw dataset contained mixed string columns (e.g., `duration` had both "90 min" and "2 Seasons"). I applied conditional logic to extract processable numeric metrics to avoid **False Positives** during aggregation.
 
-## 🛠️ Cross-Tooling Solution
-I solved this business problem using three different approaches to demonstrate technical versatility:
+### 🛠️ Cross-Tooling Approach:
+1. **Tableau:** Applied Row-Level Logic (`IF`) and String Manipulation (`SPLIT`) to segregate Movies from TV Shows.
+2. **SQL:** Implemented `CASE WHEN` statements to conditionally parse strings and apply Type Casting.
+3. **Python (Pandas):** Used Boolean Indexing (`np.where`) and vectorized operations for efficient dataframe segregation.
 
-1. **Tableau:** Applied Row-Level Logic (`IF` statements) and String Manipulation (`SPLIT`) to create new calculated fields, separating Movies from TV Shows for an accurate tabular visualization.
-2. **SQL:** Implemented `CASE WHEN` statements to conditionally parse strings and apply **Type Casting** (converting text to integers) directly at the query level.
-3. **Python (Pandas):** Used Boolean Indexing (`np.where`) and vectorized operations to efficiently segregate the data in a DataFrame.
+## 📊 Exploratory Data Analysis & Dashboard
+Once the data was cleaned, I conducted an EDA to answer key business questions:
+- **Geospatial Analysis:** Where is our content coming from? *(Symbol Map)*
+- **Time-Series Trend:** How has production grown over the years? *(Line Chart)*
+- **Market Share:** What is the proportion of Movies vs. TV Shows? *(Pie Chart)*
+- **Top N Categories:** Which genres dominate the platform? *(Bar Chart)*
 
-## 📈 Visual Output
-Check out the Tableau dashboard tabular result here: 
-> *(Cole aqui o link do Snipboard/ImgBB da sua captura de tela do Tableau)*
+### ✨ Final Dashboard Visual
+*(Substitua o texto abaixo pela imagem do seu dashboard. Pode arrastar a imagem diretamente do seu computador para dentro desta caixa de edição do GitHub e ele gera o código automaticamente)*
+[<img width="1363" height="764" alt="Dash" src="https://github.com/user-attachments/assets/421eaf92-9d22-44ec-a6c2-6d6943429049" />
+]
 
 ---
 *Project built as part of my Data Analytics continuous learning journey.*
