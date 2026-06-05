@@ -18,8 +18,7 @@ Once the data was cleaned, I conducted an EDA to answer key business questions:
 - **Market Share:** What is the proportion of Movies vs. TV Shows? *(Pie Chart)*
 - **Top N Categories:** Which genres dominate the platform? *(Bar Chart)*
 
-### ✨ Final Dashboard Visual
-*(Substitua o texto abaixo pela imagem do seu dashboard. Pode arrastar a imagem diretamente do seu computador para dentro desta caixa de edição do GitHub e ele gera o código automaticamente)*
+### ✨ Final Dashboard Visual*
 [<img width="1363" height="764" alt="Dash" src="https://github.com/user-attachments/assets/421eaf92-9d22-44ec-a6c2-6d6943429049" />
 ]
 
