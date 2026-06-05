@@ -19,8 +19,8 @@ Once the data was cleaned, I conducted an EDA to answer key business questions:
 - **Top N Categories:** Which genres dominate the platform? *(Bar Chart)*
 
 ### ✨ Final Dashboard Visual*
-[<img width="1363" height="764" alt="Dash" src="https://github.com/user-attachments/assets/421eaf92-9d22-44ec-a6c2-6d6943429049" />
-]
+<img width="1363" height="764" alt="Dash" src="https://github.com/user-attachments/assets/421eaf92-9d22-44ec-a6c2-6d6943429049" />
+
 
 ---
 *Project built as part of my Data Analytics continuous learning journey.*
