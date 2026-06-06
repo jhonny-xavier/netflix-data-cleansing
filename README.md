@@ -18,7 +18,13 @@ Once the data was cleaned, I conducted an EDA to answer key business questions:
 - **Market Share:** What is the proportion of Movies vs. TV Shows? *(Pie Chart)*
 - **Top N Categories:** Which genres dominate the platform? *(Bar Chart)*
 
-### ✨ Final Dashboard Visual*
+### 🔗 Live Interactive Dashboard
+The final interactive dashboard has been deployed to the cloud. It includes global interactive filters (**Dropdowns** for *Release Year* and *Director*) allowing end-users to dynamically slice and dice the data.
+
+👉 **[Click here to access the Live Tableau Dashboard]https://public.tableau.com/app/profile/jhonny.machado/viz/Livro1_17805904090720/Dashboard2?publish=yes**
+
+---
+*Project built as part of my Data Analytics continuous learning journey.*
 <img width="1363" height="764" alt="Dash" src="https://github.com/user-attachments/assets/421eaf92-9d22-44ec-a6c2-6d6943429049" />
 
 
