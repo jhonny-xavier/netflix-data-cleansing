@@ -1,25 +1,45 @@
-# 🎬 Netflix Data Cleansing & Exploratory Data Analysis (EDA)
+# Netflix Data Analysis — Limpeza de Dados e EDA
+Ferramentas: Python (Pandas) · SQL · Tableau Public
+Dataset: 8.807 títulos | Fonte: Kaggle Netflix Movies and TV Shows
 
-## 📌 Project Overview
-This project focuses on **End-to-End Data Analysis**, starting with data cleansing and feature engineering, culminating in a comprehensive Business Intelligence Dashboard using the global Netflix titles dataset.
+📌 Visão Geral
+Projeto de análise de dados end-to-end focado em resolver inconsistências reais em um
+dataset de produção, construindo um pipeline de limpeza reproduzível e um dashboard
+interativo para exploração de tendências de conteúdo da Netflix.
 
-## 🎯 Business Problem & Solution
-The raw dataset contained mixed string columns (e.g., `duration` had both "90 min" and "2 Seasons"). I applied conditional logic to extract processable numeric metrics to avoid **False Positives** during aggregation.
+🎯 Problema de Negócio
+O campo `duration` misturava duas unidades distintas ('90 min' para filmes e '2 Seasons'
+para séries), tornando qualquer agregação direta matematicamente inválida.
+Solução: separação condicional em dois campos numéricos independentes,
+eliminando distorções nos agregados e habilitando comparações corretas por tipo.
 
-### 🛠️ Cross-Tooling Approach:
-1. **Tableau:** Applied Row-Level Logic (`IF`) and String Manipulation (`SPLIT`) to segregate Movies from TV Shows.
-2. **SQL:** Implemented `CASE WHEN` statements to conditionally parse strings and apply Type Casting.
-3. **Python (Pandas):** Used Boolean Indexing (`np.where`) and vectorized operations for efficient dataframe segregation.
+🛠️ Decisões Técnicas por Ferramenta
+Cada ferramenta foi escolhida para o estágio onde oferece maior produtividade:
 
-## 📊 Exploratory Data Analysis & Dashboard
-Once the data was cleaned, I conducted an EDA to answer key business questions:
-- **Geospatial Analysis:** Where is our content coming from? *(Symbol Map)*
-- **Time-Series Trend:** How has production grown over the years? *(Line Chart)*
-- **Market Share:** What is the proportion of Movies vs. TV Shows? *(Pie Chart)*
-- **Top N Categories:** Which genres dominate the platform? *(Bar Chart)*
+- SQL: transformações na camada de dados — CASE WHEN para parsing condicional
+  de strings e conversão de tipo. Escolhido por performance em grandes volumes.
 
-### 🔗 Live Interactive Dashboard
-The final interactive dashboard has been deployed to the cloud. It includes global interactive filters (**Dropdowns** for *Release Year* and *Director*) allowing end-users to dynamically slice and dice the data.
+- Python/Pandas: EDA exploratória e engenharia de features — np.where() para
+  atribuição condicional vetorizada; indexação booleana df[df['type']=='Movie']
+  para filtragem eficiente de subconjuntos. Escolhido pela flexibilidade analítica.
+
+- Tableau: visualização final para stakeholders não técnicos — IF e SPLIT para
+  separação lógica em nível de linha. Escolhido pela acessibilidade do dashboard.
+
+📊 Insights Encontrados na EDA
+- Concentração geográfica: 36% do catálogo é produção americana; Índia (12%) e
+  Reino Unido (8%) formam os outros dois maiores polos — dado relevante para
+  estratégia de diversificação regional.
+- Aceleração do catálogo: entre 2015 e 2019 a adição de títulos cresceu 280%,
+  com queda em 2020-2021 possivelmente relacionada à pandemia.
+- Proporção Filmes vs Séries: 69% filmes, 31% séries — distribuição que sugere
+  foco histórico em cinema com crescimento recente de séries originais.
+- Gêneros dominantes: Drama Internacional e Comédia lideram; Documentários
+  representam segmento menor mas com crescimento acelerado desde 2017.
+
+🔗 Dashboard Interativo
+Publicado no Tableau Public com filtros globais por Ano de Lançamento e Diretor,
+permitindo segmentação dinâmica do catálogo completo.
 
 👉 **[Click here to access the Live Tableau Dashboard]https://public.tableau.com/app/profile/jhonny.machado/viz/Livro1_17805904090720/Dashboard2?publish=yes**
 
